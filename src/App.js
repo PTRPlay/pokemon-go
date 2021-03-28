@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import PokemonsCards from './app/PokemonsCards';
+import Pokemon from './app/Pokemon';
 
 function App() {
+  const [isSelectedPocke, setIsSelectedPocke] = useState(false);
+
+  const handlePockeInfo = () => {
+      setIsSelectedPocke(true)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <header className="App-header">
+          Pokemondex
       </header>
+        <div className='page-wrapper'>
+          <section >
+            <PokemonsCards handlePockeInfo={handlePockeInfo}/>
+          </section>
+          <aside >
+            {isSelectedPocke ? <Pokemon /> : null}
+            </aside>
+        </div>
     </div>
   );
 }
