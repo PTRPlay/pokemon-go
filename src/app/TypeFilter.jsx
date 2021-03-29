@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export default function Card() {
+export default function TypeFilter(props) {
     const [types, setTypes] = useState([]);
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/type?limit=999')
@@ -11,13 +11,27 @@ export default function Card() {
             })
             .catch(e => alert(e.message));
     }, [])
-console.log(types)
+
+    const filterPokemons = (selectedType) => {
+        debugger
+        let filteredPokemons = props.pokemons.map(poke => {
+            const typeExists = poke.types.some(t => t.type.name === selectedType);
+            if (!typeExists) {
+              poke["visible"] = false;
+            } else poke["visible"] = true;
+            return poke;
+          })
+          console.log(filteredPokemons)
+        props.setPokemons(filteredPokemons)
+    }
+
     return (
         <div className="btn-group" role="group" aria-label="Filter button">
             {types.map((type) => {
-                return(
-                 <button type="button" className="btn btn-secondary">{type.name}</button>
-            )})}
+                return (
+                    <button type="button" className="btn btn-outline-success mb-3" onClick={() => { filterPokemons(type.name) }}>{type.name}</button>
+                )
+            })}
         </div>
     )
 }
