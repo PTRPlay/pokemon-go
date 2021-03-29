@@ -21,15 +21,14 @@ export default function TypeFilter(props) {
             } else poke["visible"] = true;
             return poke;
           })
-          console.log(filteredPokemons)
         props.setPokemons(filteredPokemons)
     }
 
     return (
-        <div className="btn-group" role="group" aria-label="Filter button">
+        <div className="btn-toolbar justify-content-center" role="group" aria-label="Filter button">
             {types.map((type) => {
                 return (
-                    <button type="button" className="btn btn-outline-success mb-3" onClick={() => { filterPokemons(type.name) }}>{type.name}</button>
+                    <button type="button" key={type.name} className="btn btn-outline-success mb-3" onClick={() => { filterPokemons(type.name) }}>{type.name}</button>
                 )
             })}
         </div>

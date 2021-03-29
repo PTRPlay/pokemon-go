@@ -5,12 +5,13 @@
 .App-header {
   background-color: #282c34;
   min-height: 15vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: white;
+  color: #c7a008;
 }
 
 section {
@@ -22,7 +23,7 @@ section {
 
 aside {
   float: right;
-  width: 40vh;
+  width: 20%;
   padding-top: 10em;
 }
 
@@ -39,7 +40,7 @@ aside {
 }
 
 .card {
-  margin: 0.5em
+  margin: 0.5em;
 }
 
 .card-text {
@@ -51,5 +52,54 @@ aside {
   width: 30%;
   margin: 2em;
 }
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 300px;
+  overflow: auto;
+  }
+
+.table-wrapper-scroll-y {
+  display: block;
+  }
+
+
+  @media (max-width: 500px) {
+    aside {
+      width: 60%;
+      position: fixed;
+      bottom: 2;
+      margin: 0;
+      padding: 0;
+    }
+    .page-wrapper {
+      display: inline-flex;
+    }
+    .my-custom-scrollbar {
+      position: relative;
+      height: 150px;
+      overflow: auto;
+      }
+    
+    .table-wrapper-scroll-y {
+      display: block;
+      }
+    .selected-pokemon, .selected-card-body {
+      background: border-box !important;
+      border: solid 2px black;
+    } 
+
+  }
+
+  /* @media (max-height: 500) {
+    .my-custom-scrollbar {
+      position: relative;
+      height: 100%;
+      overflow: auto;
+      }
+    aside
+  } */ 
+
+
 
 

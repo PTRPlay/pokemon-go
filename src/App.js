@@ -48,6 +48,8 @@ function App() {
     getMorePokemos();
   }
 
+  console.log(pokemons)
+
   const handlePokemons = (poke) => {
     setPokemons(poke)
   }
@@ -55,13 +57,13 @@ function App() {
   return (
     <div className="App">
         <header className="App-header">
-          Pokedex
+          <h1>Pokedex</h1>
       </header>
         <div className='page-wrapper'>
           <section >
             <PokemonsCards handlePokeInfo={handlePokeInfo} setPokemons={handlePokemons} pokemons={pokemons} handleMorePokemons={handleMorePokemons}/>
           </section>
-          <aside >
+          <aside>
             {Object.keys(loadedPoke).length !== 0 ? <Pokemon poke={loadedPoke} /> : null}
             </aside>
         </div>

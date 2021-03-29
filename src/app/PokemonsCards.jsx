@@ -10,7 +10,6 @@ export default function PokemonsCards(props) {
             <TypeFilter pokemons={props.pokemons} setPokemons={props.setPokemons}/>
             <div className="row justify-content-around">
                 {props.pokemons.map((poke) => {
-                    debugger
                     return (
                         <div className="col-xs-12 col-sm-6 col-md-4" key={poke.name+ '-' + poke.id} style={{display: poke.visible ? 'block' : 'none'}}>
                             <Card poke={poke} handlePokeInfo={props.handlePokeInfo}/>
