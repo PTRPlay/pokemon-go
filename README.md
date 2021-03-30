@@ -14,21 +14,21 @@ This project is a simple single page app. The main purpose is to implement a sou
 
 1. Firstly, you see a page with first chunk of 12 pokemons and filtering buttons.
 
-[First step](file:///D:/Private/pokemons1.PNG)
+![First step](file:///D:/Private/pokemons1.PNG)
 
 2. You can add more pokemons to your page if needed at the bottom of the page.
 
-[Second step](file:///D:/Private/secondstep.PNG)
+![Second step](file:///D:/Private/secondstep.PNG)
 
 3. You are free to filter your pokemon's by their types, to see all pokemons tap 'Load more...'
 
-[Third step](file:///D:/Private/thridStep.PNG)
+![Third step](file:///D:/Private/thridStep.PNG)
 
 4. Tap on what ever pokemon you like and you will see its info on the right. This pokemon is sticky so you don't need to worry to scroll up all the time.
 
-[Fourth step one](file:///D:/Private/fourthstepOne.PNG)
+![Fourth step one](file:///D:/Private/fourthstepOne.PNG)
 
-[Fourth step two](file:///D:/Private/fourthstepTwo.PNG)
+![Fourth step two](file:///D:/Private/fourthstepTwo.PNG)
 
 ## API used
 
