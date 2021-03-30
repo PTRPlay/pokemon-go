@@ -12,7 +12,7 @@ This project is a simple single page app. The main purpose is to implement a sou
 
 ## How to run client app
 
-1. Firstly, you see a page with first chunk of 12 pokemons and filtering buttons.
+1. At first, you see a page with first chunk of 12 pokemons and filtering buttons.
 
 ![First step](https://github.com/Chaika813/pokemon-go/blob/main/public/firstStep.PNG)
 
