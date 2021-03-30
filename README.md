@@ -16,7 +16,7 @@ This project is a simple single page app. The main purpose is to implement a sou
 
 ![First step](https://github.com/Chaika813/pokemon-go/blob/main/public/firstStep.PNG)
 
-2. You can add more pokemons to your page if needed at the bottom of the page.
+2. You can load more pokemons to your page if needed at the bottom of the page.
 
 ![Second step](https://github.com/Chaika813/pokemon-go/blob/main/public/secondStep.PNG)
 
